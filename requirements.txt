@@ -1,3 +1,1 @@
 transformers==4.24
-TensorFlow==2.10
-PyTorch==1.0.2
