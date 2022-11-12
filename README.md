@@ -33,3 +33,7 @@
 1. install python 3.10 +
 2. `pip install poetry` (1.2+)
 3. `poetry install --with tensorflow`
+
+## Run the demo app
+
+`python3 demo.py`
