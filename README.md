@@ -15,7 +15,7 @@
 
 1. `poetry install --with windows_torch`
 
-#### Install PyTorch for Windows
+#### Install PyTorch for Mac
 
 1. `poetry install --with mac_torch`
 
