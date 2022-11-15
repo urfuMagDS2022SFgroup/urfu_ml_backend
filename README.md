@@ -28,8 +28,7 @@
 3. `poetry install --with tensorflow`
 
 ## Run the demo app
-Demo application try to understand entered sentence sentiment
+#### Demo application try to understand entered sentence sentiment
 
-`python3 demo.py`
-
-Enter a sentence in Russian
+1. Run `python3 demo.py`
+2. Enter a sentence in Russian
