@@ -7,17 +7,10 @@
 1. install python 3.10 +
 2. `pip install poetry` (1.2+)
 
-#### Install PyTorch for Linux
+#### Install PyTorch
 
-1. `poetry install --with linux_torch`
+1. `poetry install --with torch`
 
-#### Install PyTorch for Windows
-
-1. `poetry install --with windows_torch`
-
-#### Install PyTorch for Mac
-
-1. `poetry install --with mac_torch`
 
 ### Using pip3
 
@@ -35,5 +28,7 @@
 3. `poetry install --with tensorflow`
 
 ## Run the demo app
-
+Demo application try to understand entered sentence sentiment 
 `python3 demo.py`
+
+Enter a sentence in Russian
