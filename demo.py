@@ -6,8 +6,6 @@ def classifier(text: str):
     return cls(text)
 
 
-print(classifier("Я обожаю инженерию машинного обучения!"))
-
 if __name__ == "__main__":
     print("Please enter your phrase in Russian: ")
     sentence = input()
