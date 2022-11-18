@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "UrFU_data_science_project"
-version = "0.0.1"
+version = "0.2.1"
 description = "UrFU educational project"
 authors = [
     "Vladimir Katin <katin.v.v.@gmail.com>",
@@ -13,10 +13,15 @@ readme = "README.md"
 repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.9.7 || >3.9.7,<3.11"
+python = ">=3.10,<4.0.0"
 transformers = "^4.24.0"
 numpy = "^1.23.2"
-streamlit = "^1.15.0"
+
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cpu"
+secondary = true
 
 [tool.poetry.group.torch]
 optional = true
@@ -24,13 +29,23 @@ optional = true
 [tool.poetry.group.tensorflow]
 optional = true
 
+[tool.poetry.group.streamlit]
+optional = true
+
 [tool.poetry.group.torch.dependencies]
-torch = "1.13.0"
-torchvision = "0.14.0"
-torchaudio = "0.13.0"
+torch = { version = "1.13.0", source = "torch" }
+torchaudio = { version = "0.13.0", source = "torch" }
+torchvision = { version = "0.14.0", source = "torch" }
+#torch = "1.13.0"
+#torchvision = "0.14.0"
+#torchaudio = "0.13.0"
 
 [tool.poetry.group.tensorflow.dependencies]
-tensorflow-cpu = "2.10.0"
+#tf-nightly-cpu = "*"
+
+[tool.poetry.group.streamlit.dependencies]
+streamlit = "^1.15.0"
+protobuf = "^3.20.3"
 
 [build-system]
 requires = ["poetry-core>=2.0.0"]
