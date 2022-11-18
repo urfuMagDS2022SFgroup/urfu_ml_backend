@@ -12,9 +12,10 @@ readme = "README.md"
 repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
+python = ">=3.8,<3.9.7 || >3.9.7,<3.11"
 transformers = "^4.24.0"
 numpy = "^1.23.2"
+streamlit = "^1.15.0"
 
 [tool.poetry.group.torch]
 optional = true
