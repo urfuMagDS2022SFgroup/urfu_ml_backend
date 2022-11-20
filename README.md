@@ -17,6 +17,7 @@
 - for Mac, Linux and CPU
   - use env_setup.sh
 - for Windows and CPU
+  - read [this](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) first
   - use evn_setup.ps1
 
 ### Manually all OS
