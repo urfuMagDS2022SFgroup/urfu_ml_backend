@@ -1,39 +1,43 @@
+from typing import Optional
+
 import streamlit as st
-#import sample_model as sample_model
-from transformers import pipeline
 
-class sample_model:
-    input_text: str
-    predicted_sentiment_score: int
-    predicted_sentiment_label: str
+from nlp_model import NLPModel
 
-    def __init__(self, sentence):    
-        self.input_text = sentence    
-        self.get_classifier()
-   
-    def get_classifier(self):
-        cls = pipeline("sentiment-analysis", "blanchefort/rubert-base-cased-sentiment")
-        predicted_sentiment = cls(self.input_text)
-        self.predicted_sentiment_score = round(predicted_sentiment[0]['score'], 3)
-        self.predicted_sentiment_label = predicted_sentiment[0]['label']
 
-#@st.cache(allow_output_mutation=True)
-
-def load_sentence():
+def load_sentence() -> Optional[str]:
     text_input = st.text_input('')
-    if text_input!='':
-        st.write('your phrase:', text_input)
+    if text_input:
         return text_input
-    else:
-        return None
+    return None
 
 
-st.title("Practice 2 - Create web page using streamlit")
-message = "## Please enter your phrase in Russian:"
-st.markdown(message)
-
+st.title("Practice 2 - Create a web page using streamlit")
+st.markdown(body="## Please enter your phrase in Russian:")
 sentence = load_sentence()
-if sentence != None:
-    a=sample_model(sentence)
-    report=f"With probability {a.predicted_sentiment_label} sentiment was {a.predicted_sentiment_score}"
-    st.markdown(report)
+
+
+def predict_user_sentiment(txt: str) -> None:
+    sentiment_predict = NLPModel(txt)
+    try:
+        report = f"With probability {sentiment_predict.predicted_sentiment_score} " \
+                 f"sentiment was {sentiment_predict.predicted_sentiment_label}"
+        if sentiment_predict.predicted_sentiment_label == "NEGATIVE":
+            st.error(report, icon="💩")
+        elif sentiment_predict.predicted_sentiment_label == "NEUTRAL":
+            st.warning(report, icon="🤔")
+        else:
+            st.success(report, icon="😇")
+    except AttributeError:
+        st.error(sentiment_predict.error)
+    finally:
+        st.info("You can try another sentence", icon="ℹ️")
+
+
+def run_the_app():
+    if sentence:
+        with st.spinner("JWST..."):
+            predict_user_sentiment(sentence)
+
+
+run_the_app()
