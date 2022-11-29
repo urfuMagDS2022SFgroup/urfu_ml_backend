@@ -39,8 +39,8 @@ torchaudio = { version = "0.13.0", source = "torch" }
 torchvision = { version = "0.14.0", source = "torch" }
 
 [tool.poetry.group.tensorflow.dependencies]
-tensorflow-cpu = "2.11.0"
-protobuf = "^>=3.9.2,<3.20"
+tensorflow-cpu = "2.7.0"
+protobuf = ">=3.9.2,<3.20"
 
 [tool.poetry.group.streamlit.dependencies]
 streamlit = "1.13.0"
