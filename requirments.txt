@@ -4,3 +4,4 @@ streamlit==1.13.0
 transformers==4.24.0
 numpy==1.23.5
 torch==1.13.0
+fastapi==0.88.0

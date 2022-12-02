@@ -13,6 +13,7 @@ class NLPModel:
         self.input_text = sentence
         self.predicted_language = self.predict_language()
         self.is_ru = True if self.predicted_language == "ru" else False
+        self.is_en = True if self.predicted_language == "en" else False
         self.get_sentiment_classifier()
 
     def get_sentiment_classifier(self):
@@ -23,6 +24,15 @@ class NLPModel:
             self.predicted_sentiment_label = predicted_sentiment[0]['label']
         else:
             self.error = f"Ожидался русский язык а оказался {self.predicted_language}"
+    def get_sentiment_en_classifier(self) -> None:
+        self.error=None
+        if self.is_en:
+            pipe = pipeline("sentiment-analysis", "blanchefort/rubert-base-cased-sentiment")
+            predicted_sentiment = pipe(self.input_text)
+            self.predicted_sentiment_score = round(predicted_sentiment[0]['score'], 3)
+            self.predicted_sentiment_label = predicted_sentiment[0]['label']
+        else:
+            self.error = f"Shoud be english language but this {self.predicted_language}"
 
     def predict_language(self) -> Any:
         tokenizer = AutoTokenizer.from_pretrained("papluca/xlm-roberta-base-language-detection")
@@ -34,3 +44,5 @@ class NLPModel:
 
         predicted_class_id = logits.argmax().item()
         return model.config.id2label[predicted_class_id]
+    
+    

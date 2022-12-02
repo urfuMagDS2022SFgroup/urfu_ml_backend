@@ -1,4 +1,4 @@
-# Welcome to our small repository
+# Welcome to our small repository(20 group) 
 
 ## Setup
 ### Prerequisites
@@ -44,3 +44,6 @@
 1. Run `streamlit demo_web.py`
 2. Go to  [localhost:8501](http://localhost:8501)
 3. Enter a sentence in Russian
+##### Practice 3
+1. Run `fastAPI.py` to use webAPI
+2. Use HTTP request to know sentence sentiment as result of your sentence processing
