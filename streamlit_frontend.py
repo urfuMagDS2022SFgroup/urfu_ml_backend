@@ -2,7 +2,7 @@ from typing import Optional
 
 import streamlit as st
 
-from models.predict_sentiment import PredictSentiment, WrongLanguage
+from ml_models.predict_sentiments import PredictSentiment, WrongLanguage
 
 
 def load_sentence() -> Optional[str]:

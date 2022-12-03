@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "UrFU_data_science_project"
-version = "0.2.1"
+name = "URFU_2022_GROUP_20_PROJECT"
+version = "0.3.1"
 description = "UrFU educational project"
 authors = [
     "Vladimir Katin <katin.v.v.@gmail.com>",

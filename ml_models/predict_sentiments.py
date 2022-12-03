@@ -1,6 +1,6 @@
 from transformers import pipeline
 
-from models.predict_language import PredictLanguage
+from ml_models.predict_languages import PredictLanguage
 
 
 class WrongLanguage(Exception):
