@@ -36,11 +36,7 @@
 
 ## Run the demo app
 #### Demo application try to understand entered sentence sentiment
-##### Practice 1
-1. Run `python3 demo.py`
-2. Enter a sentence in Russian
-
-##### Practice 2
+##### Practice 2: Web app text sentiment recognition using [Streamlit](https://streamlit.io/)
 1. Run `streamlit demo_web.py`
 2. Go to  [localhost:8501](http://localhost:8501)
 3. Enter a sentence in Russian
