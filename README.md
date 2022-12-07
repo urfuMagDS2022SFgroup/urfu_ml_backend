@@ -3,13 +3,13 @@
 ## Setup
 ### Prerequisites
 - We use python 3.10 please install it
-### Using poetry and Linux:
+### Using poetry and Linux and Windows 10+:
 
 1. `pip install poetry` (1.2+)
 
 #### Install dependencies
 
-1. `poetry install --with torch,tensorflow,streamlit`
+1. `poetry install --with torch,streamlit`
 
 
 ### Using pip and Windows or Mac:
