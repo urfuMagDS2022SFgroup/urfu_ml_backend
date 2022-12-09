@@ -2,7 +2,7 @@ from typing import Optional
 
 import streamlit as st
 
-from nlp_model import NLPModel
+from ml_models.predict_sentiments import PredictSentiment, WrongLanguage
 
 
 def load_sentence() -> Optional[str]:
@@ -18,8 +18,9 @@ sentence = load_sentence()
 
 
 def predict_user_sentiment(txt: str) -> None:
-    sentiment_predict = NLPModel(txt)
+    sentiment_predict = PredictSentiment()
     try:
+        sentiment_predict.predict_sentiment_classifier(txt)
         report = f"With probability {sentiment_predict.predicted_sentiment_score} " \
                  f"sentiment was {sentiment_predict.predicted_sentiment_label}"
         if sentiment_predict.predicted_sentiment_label == "NEGATIVE":
@@ -28,7 +29,7 @@ def predict_user_sentiment(txt: str) -> None:
             st.warning(report, icon="🤔")
         else:
             st.success(report, icon="😇")
-    except AttributeError:
+    except WrongLanguage:
         st.error(sentiment_predict.error)
     finally:
         st.info("You can try another sentence", icon="ℹ️")
