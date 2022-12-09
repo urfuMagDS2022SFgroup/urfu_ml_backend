@@ -35,12 +35,3 @@ class PredictSentiment:
         self.predicted_language = self.pl.predict_language(to_recognize=predicted_text)
         return True if self.predicted_language in ["ru", "en"] else False
 
-
-if __name__ == "__main__":
-    text = "Кого за смертью посылать"
-    text_es = "Buenas tardes Raimondo"
-    ps = PredictSentiment()
-    ps.predict_sentiment_classifier(input_text=text_es)
-    print(ps.predicted_sentiment_label)
-    print(ps.predicted_language)
-    print(ps.error)
