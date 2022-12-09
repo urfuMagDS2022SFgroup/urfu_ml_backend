@@ -41,5 +41,5 @@
 2. Go to  [localhost:8501](http://localhost:8501)
 3. Enter a sentence in Russian
 ##### Practice 3
-1. Run `uvicorn backend.py` to use web API
+1. Run `uvicorn backend:app` to use web API
 2. Use HTTP request to know sentence sentiment as result of your sentence processing
