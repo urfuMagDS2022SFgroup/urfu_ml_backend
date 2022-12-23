@@ -3,13 +3,13 @@
 ## Setup
 ### Prerequisites
 - We use python 3.10 please install it
-### Using poetry and Linux:
+### Using poetry and Linux and Windows 10+:
 
 1. `pip install poetry` (1.2+)
 
 #### Install dependencies
 
-1. `poetry install --with torch,tensorflow,streamlit`
+1. `poetry install --with torch,streamlit`
 
 
 ### Using pip and Windows or Mac:
@@ -37,9 +37,9 @@
 ## Run the demo app
 #### Demo application try to understand entered sentence sentiment
 ##### Practice 2: Web app text sentiment recognition using [Streamlit](https://streamlit.io/)
-1. Run `streamlit demo_web.py`
+1. Run `streamlit streamlit_frontend.py`
 2. Go to  [localhost:8501](http://localhost:8501)
 3. Enter a sentence in Russian
 ##### Practice 3
-1. Run `fastAPI.py` to use webAPI
+1. Run `uvicorn backend:app` to use web API
 2. Use HTTP request to know sentence sentiment as result of your sentence processing

@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "URFU_2022_GROUP_20_PROJECT"
-version = "0.3.1"
+name = "UrFU_data_science_project"
+version = "0.2.1"
 description = "UrFU educational project"
 authors = [
     "Vladimir Katin <katin.v.v.@gmail.com>",
@@ -16,6 +16,7 @@ repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 python = ">=3.10,<3.11"
 transformers = "^4.25.1"
 numpy = "^1.23.2"
+fastapi = "0.88.0"
 pydantic = "^1.10.2"
 uvicorn = {extras = ["standard"], version = "^0.20.0"}
 strawberry-graphql = {version = "^0.146.0", extras = ["fastapi"]}
@@ -52,14 +53,6 @@ protobuf = ">=3.9.2,<3.20"
 [tool.poetry.group.streamlit.dependencies]
 streamlit = "1.13.0"
 
-
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.2.0"
-pytest-asyncio = "^0.20.2"
-pytest-mock = "^3.10.0"
-mypy = "^0.991"
-httpx = "^0.23.1"
 
 [build-system]
 requires = ["poetry-core>=2.0.0"]
