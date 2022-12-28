@@ -8,4 +8,4 @@ RUN pip install poetry
 
 RUN poetry install --with torch,backend
 
-CMD ["uvicorn", "src.backend:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["poetry", "run", "uvicorn", "src.backend:app", "--host", "0.0.0.0", "--port", "80"]
