@@ -19,6 +19,7 @@ numpy = "^1.23.2"
 fastapi = "0.88.0"
 pydantic = "^1.10.2"
 uvicorn = "^0.20.0"
+importlib = "^1.0.4"
 
 
 [[tool.poetry.source]]
