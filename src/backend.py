@@ -2,13 +2,12 @@ import json
 
 from fastapi import FastAPI, Response, status
 
-from api.models.basic import Info, Root
-from api.models.errors import PredictionError
-from api.models.predicted import Predicted
-from api.models.to_predict import ToPredict
-from ml_models.predict_sentiments import PredictSentiment, WrongLanguage
+from src.api.models.basic import Info, Root
+from src.api.models.errors import PredictionError
+from src.api.models.predicted import Predicted
+from src.api.models.to_predict import ToPredict
+from src.ml_models.predict_sentiments import PredictSentiment, WrongLanguage
 
-# __version__ = importlib.metadata.version("URFU_2022_GROUP_20_PROJECT")
 __version__ = "0.3.1"
 
 app = FastAPI(version=__version__)

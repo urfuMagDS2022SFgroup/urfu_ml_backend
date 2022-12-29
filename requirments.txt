@@ -6,4 +6,3 @@ torch==1.13.0
 fastapi==0.88.0
 pydantic==1.10.2
 uvicorn==0.20.0
-importlib==1.0.4

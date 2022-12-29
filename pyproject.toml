@@ -16,10 +16,6 @@ repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 python = ">=3.10,<3.11"
 transformers = "^4.25.1"
 numpy = "^1.23.2"
-fastapi = "0.88.0"
-pydantic = "^1.10.2"
-uvicorn = "^0.20.0"
-importlib = "^1.0.4"
 
 
 [[tool.poetry.source]]
@@ -37,6 +33,9 @@ optional = true
 [tool.poetry.group.streamlit]
 optional = true
 
+[tool.poetry.group.backend]
+optional = true
+
 [tool.poetry.group.torch.dependencies]
 torch = { version = "1.13.0", source = "torch" }
 torchaudio = { version = "0.13.0", source = "torch" }
@@ -48,6 +47,12 @@ protobuf = ">=3.9.2,<3.20"
 
 [tool.poetry.group.streamlit.dependencies]
 streamlit = "1.13.0"
+
+[tool.poetry.group.backend.dependencies]
+fastapi = "0.88.0"
+pydantic = "^1.10.2"
+uvicorn = "^0.20.0"
+importlib = "^1.0.4"
 
 
 [build-system]
