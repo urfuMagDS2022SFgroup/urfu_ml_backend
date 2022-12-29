@@ -8,7 +8,6 @@ from src.api.models.predicted import Predicted
 from src.api.models.to_predict import ToPredict
 from src.ml_models.predict_sentiments import PredictSentiment, WrongLanguage
 
-# __version__ = importlib.metadata.version("URFU_2022_GROUP_20_PROJECT")
 __version__ = "0.3.1"
 
 app = FastAPI(version=__version__)

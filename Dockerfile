@@ -1,11 +1,17 @@
 FROM python:3.10-buster
+ENV HOST="0.0.0.0"
+ENV PORT=80
+ENV POETRY_VERSION="1.3"
+WORKDIR /back
 
-ADD . /src
-WORKDIR /src
+RUN pip install poetry==$POETRY_VERSION
 
-#RUN pip install --no-cache-dir --upgrade -r ./requirments.txt
-RUN pip install poetry
-
+COPY pyproject.toml /back/pyproject.toml
+COPY poetry.toml /back/poetry.toml
+COPY poetry.lock /back/poetry.lock
 RUN poetry install --with torch,backend
 
-CMD ["poetry", "run", "uvicorn", "src.backend:app", "--host", "0.0.0.0", "--port", "80"]
+COPY src /back/src
+
+ENV PYTHONPATH=/back
+CMD ["poetry", "run", "uvicorn", "src.backend:app", "--host", "$HOST", "--port", "$PORT"]
