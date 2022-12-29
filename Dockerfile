@@ -1,6 +1,6 @@
 FROM python:3.10-buster
 ENV HOST="0.0.0.0"
-ENV PORT=80
+ENV PORT="80"
 ENV POETRY_VERSION="1.3"
 WORKDIR /back
 
@@ -14,4 +14,4 @@ RUN poetry install --with torch,backend
 COPY src /back/src
 
 ENV PYTHONPATH=/back
-CMD ["poetry", "run", "uvicorn", "src.backend:app", "--host", "$HOST", "--port", "$PORT"]
+CMD poetry run uvicorn src.backend:app --host $HOST --port $PORT
