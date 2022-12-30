@@ -50,3 +50,14 @@
 `--name` name for the app `-p 80:80` mapping outside:inside ports `api` built image
 
 Server will be available on `your_ip_address:80` e.g. `192.168.1.1:80` or `127.0.0.1:80`
+
+You can check the server availability using `http://your_ip_here:80/info`
+Answer should be like:
+```json
+{
+    "root": "/",
+    "get_info": "/info",
+    "create_prediction_ru": "/predict/ru",
+    "create_prediction_en": "/predict/en"
+}
+```
