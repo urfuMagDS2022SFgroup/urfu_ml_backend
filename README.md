@@ -48,3 +48,5 @@
 2. From the project dir run `docker build -t api .` where `api` - tag for image and `.` is where project Dockerfile is
 3. After build the project run `docker run -d --name ml_urfu -p 80:80 api` where `-d` detached launch
 `--name` name for the app `-p 80:80` mapping outside:inside ports `api` built image
+
+Server will be available on `your_ip_address:80` e.g. `192.168.1.1:80` or `127.0.0.1:80`
