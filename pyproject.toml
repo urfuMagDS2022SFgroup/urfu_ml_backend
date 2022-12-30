@@ -53,6 +53,8 @@ fastapi = "0.88.0"
 pydantic = "^1.10.2"
 uvicorn = "^0.20.0"
 importlib = "^1.0.4"
+librosa = "0.9.2"
+datasets = "2.8.0"
 
 
 [build-system]
