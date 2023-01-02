@@ -5,7 +5,6 @@ class Info(BaseModel):
     root: str = "/"
     get_info: str = "/info"
     create_prediction_ru: str = "/predict/ru"
-    create_prediction_en: str = "/predict/en"
 
 
 class Root(BaseModel):
@@ -15,6 +14,6 @@ class Root(BaseModel):
     authors: list = [
         "Vladimir Katin <katin.v.v.@gmail.com>",
         "Anton Bessolitsyn <Anton.Bessolitsyn@hotmail.com>",
-        "Anna Bezhenar <asbezhenar@gmail.com>",
-        "Alexander Orlov <eaglophone@gmail.com>"
+        "Alexander Orlov <eaglophone@gmail.com>",
+        "Anna Bezhenar <asbezhenar@gmail.com>"
     ]
