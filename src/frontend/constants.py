@@ -1,1 +1,1 @@
-BACKEND_URL: str = "http://dzailz.su:43434/"
+BACKEND_URL: str = "http://dzailz.su:8000/"
