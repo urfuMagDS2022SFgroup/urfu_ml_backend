@@ -34,7 +34,7 @@ st.markdown(f"[our Git Hub]({response_text['git_hub']})")
 
 
 def predict_user_sentiment(to_predict: dict) -> None:
-    response = requests.request(method="POST", url=f"{url}predict/ru", json=to_predict)
+    response = requests.request(method="POST", url=f"{url}predict", json=to_predict)
     resp_text = json.loads(response.text)
     resp_code = response.status_code
     if resp_code == 200:

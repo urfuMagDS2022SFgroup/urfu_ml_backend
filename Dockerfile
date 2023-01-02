@@ -1,6 +1,6 @@
 FROM python:3.10-buster
 ENV HOST="0.0.0.0"
-ENV PORT="80"
+ENV PORT="8000"
 ENV POETRY_VERSION="1.3"
 WORKDIR /back
 
