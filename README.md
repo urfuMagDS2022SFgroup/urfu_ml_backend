@@ -37,14 +37,14 @@
 ## Run the demo app
 #### Demo application try to understand entered sentence sentiment
 ##### Practice 2: Web app text sentiment recognition using [Streamlit](https://streamlit.io/)
-1. Run `streamlit streamlit_frontend.py`
+1. Run `streamlit run src/streamlit_frontend.py`
 2. Go to  [localhost:8501](http://localhost:8501)
 3. Enter a sentence in Russian
 ##### Practice 3
 1. Run `uvicorn backend:app` to use web API
 2. Use HTTP request to know sentence sentiment as result of your sentence processing
 ###### Using Docker
-1. [Install docker](https://docs.docker.com/get-docker/) to your system
+1. [Install docker](https://docs.docker.com/get-docker/) on your system
 2. From the project dir run `docker build -t api .` where `api` - tag for image and `.` is where project Dockerfile is
 3. After build the project run `docker run -d --name ml_urfu -p 80:80 api` where `-d` detached launch
 `--name` name for the app `-p 80:80` mapping outside:inside ports `api` built image

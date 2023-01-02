@@ -8,7 +8,7 @@ authors = [
     "Anton Bessolitsyn <Anton.Bessolitsyn@hotmail.com>",
     "Alexander Orlov <eaglophone@gmail.com>"
 ]
-license = "MIT"
+license = "GPL v3"
 readme = "README.md"
 repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 
