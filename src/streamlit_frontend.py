@@ -1,11 +1,10 @@
-from typing import Optional
-
 import streamlit as st
 
-from ml_models.predict_sentiments import PredictSentiment, WrongLanguage
+from ml_models.predict_sentiments import PredictSentiment
+from src.custom_exceptions import UnsupportedLanguageException
 
 
-def load_sentence() -> Optional[str]:
+def load_sentence() -> str | None:
     text_input = st.text_input('')
     if text_input:
         return text_input
@@ -29,7 +28,7 @@ def predict_user_sentiment(txt: str) -> None:
             st.warning(report, icon="🤔")
         else:
             st.success(report, icon="😇")
-    except WrongLanguage:
+    except UnsupportedLanguageException:
         st.error(sentiment_predict.error)
     finally:
         st.info("You can try another sentence", icon="ℹ️")
