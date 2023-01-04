@@ -9,7 +9,7 @@
 
 #### Install dependencies
 
-1. `poetry install --with torch,streamlit`
+1. `poetry install --with backend,torch`
 
 
 ### Using pip and Windows or Mac:
@@ -37,9 +37,8 @@
 ## Run the demo app
 #### Demo application try to understand entered sentence sentiment
 ##### Practice 2: Web app text sentiment recognition using [Streamlit](https://streamlit.io/)
-1. Run `streamlit run src/streamlit_frontend.py`
-2. Go to  [localhost:8501](http://localhost:8501)
-3. Enter a sentence in Russian
+
+- Streamlit lives [here](https://github.com/urfuMagDS2022SFgroup/streamlit_frontend) and should be run with this backend
 ##### Practice 3
 1. Run `uvicorn backend:app` to use web API
 2. Use HTTP request to know sentence sentiment as result of your sentence processing
@@ -53,11 +52,17 @@ Server will be available on `your_ip_address:80` e.g. `192.168.1.1:80` or `127.0
 
 You can check the server availability using `http://your_ip_here:80/info`
 Answer should be like:
+
 ```json
 {
-    "root": "/",
-    "get_info": "/info",
-    "create_prediction_ru": "/predict/ru",
-    "create_prediction_en": "/predict/en"
+  "root": "/",
+  "get_info": "/info",
+  "create_prediction_ru": "/predict/ru",
+  "create_prediction_en": "/predict/en"
 }
 ```
+
+#### Practice 4
+
+1. Install project using Poetry `poetry install --with backend,torch,tests`
+2. Run tests `poetry run pytest` (you must be in the project folder)
