@@ -10,7 +10,7 @@ class TestRoot:
                 "Vladimir Katin <katin.v.v.@gmail.com>",
                 "Anton Bessolitsyn <Anton.Bessolitsyn@hotmail.com>",
                 "Alexander Orlov <eaglophone@gmail.com>",
-                "Anna Bezhenar <asbezhenar@gmail.com>"
-            ]
+                "Anna Bezhenar <asbezhenar@gmail.com>",
+            ],
         }
         assert response.json() == expected

@@ -16,6 +16,7 @@ repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 python = ">=3.10,<3.11"
 transformers = "^4.25.1"
 numpy = "^1.23.2"
+black = "22.12.0"
 
 
 [[tool.poetry.source]]

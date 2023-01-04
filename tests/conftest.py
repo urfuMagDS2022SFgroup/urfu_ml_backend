@@ -13,9 +13,7 @@ def client():
 
 @pytest.fixture(scope="function")
 def predict(request, client):
-    payload = ToPredict(
-        sentence=request.param
-    ).dict()
+    payload = ToPredict(sentence=request.param).dict()
     return client.post(
         "/predict",
         json=payload,

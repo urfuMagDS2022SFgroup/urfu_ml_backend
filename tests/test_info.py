@@ -5,6 +5,6 @@ class TestInfo:
         expected = {
             "root": "/",
             "get_info": "/info",
-            "create_prediction_ru": "/predict/ru"
+            "create_prediction_ru": "/predict/ru",
         }
         assert response.json() == expected

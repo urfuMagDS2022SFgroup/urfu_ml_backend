@@ -4,8 +4,8 @@ from src.api.models.basic import Info, Root
 from src.api.models.errors import PredictionError, TimeOutError
 from src.api.models.predicted import Predicted
 from src.api.models.to_predict import ToPredict
-from src.ml_models.predict_sentiments import PredictSentiment
 from src.custom_exceptions import UnsupportedLanguageException, TimeOutException
+from src.ml_models.predict_sentiments import PredictSentiment
 
 __version__ = "0.6.1"
 
@@ -35,7 +35,7 @@ async def create_prediction_ru(
         result = Predicted(
             lang=ps.predicted_language,
             score=ps.predicted_sentiment_score,
-            sentiment=ps.predicted_sentiment_label
+            sentiment=ps.predicted_sentiment_label,
         )
     except UnsupportedLanguageException:
         response.status_code = status.HTTP_400_BAD_REQUEST
