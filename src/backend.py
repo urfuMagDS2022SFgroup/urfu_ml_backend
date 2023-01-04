@@ -7,7 +7,7 @@ from src.api.models.to_predict import ToPredict
 from src.ml_models.predict_sentiments import PredictSentiment
 from src.custom_exceptions import UnsupportedLanguageException, TimeOutException
 
-__version__ = "0.4.1"
+__version__ = "0.6.1"
 
 app = FastAPI(version=__version__)
 

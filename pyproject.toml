@@ -8,7 +8,7 @@ authors = [
     "Anton Bessolitsyn <Anton.Bessolitsyn@hotmail.com>",
     "Alexander Orlov <eaglophone@gmail.com>"
 ]
-license = "GPL v3"
+license = "GPL-3.0-or-later"
 readme = "README.md"
 repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 
@@ -33,6 +33,9 @@ optional = true
 [tool.poetry.group.backend]
 optional = true
 
+[tool.poetry.group.tests]
+optional = true
+
 [tool.poetry.group.torch.dependencies]
 torch = { version = "1.13.0", source = "torch" }
 torchaudio = { version = "0.13.0", source = "torch" }
@@ -47,6 +50,10 @@ fastapi = "0.88.0"
 pydantic = "^1.10.2"
 uvicorn = "^0.20.0"
 importlib = "^1.0.4"
+
+[tool.poetry.group.tests.dependencies]
+pytest = "7.2.0"
+httpx = "0.23.2"
 
 
 [build-system]
