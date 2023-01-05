@@ -1,8 +1,13 @@
-# Welcome to our small repository(20 group) 
+[![Linters and tests](https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend/actions/workflows/run_lints_and_tests_.yml/badge.svg?branch=main)](https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend/actions/workflows/run_lints_and_tests_.yml)
+
+# Welcome to our small repository(20 group)
 
 ## Setup
+
 ### Prerequisites
+
 - We use python 3.10 please install it
+
 ### Using poetry and Linux and Windows 10+:
 
 1. `pip install poetry` (1.2+)
@@ -11,28 +16,27 @@
 
 1. `poetry install --with backend,torch`
 
-
 ### Using pip and Windows or Mac:
 
 - for Mac, Linux and CPU
-  - use env_setup.sh
+    - use env_setup.sh
 - for Windows and CPU
-  - read [this](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) first
-  - use evn_setup.ps1
+    - read [this](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) first
+    - use evn_setup.ps1
 
 ### Manually all OS
 
 1. Install virtualenv
-   - python3 -m pip install --user virtualenv
+    - python3 -m pip install --user virtualenv
 2. Create venv
-   - python3 -m venv ./venv
+    - python3 -m venv ./venv
 3. Activate venv
-   - On Linux and Mac
-     - source ./venv/bin/activate
-   - On Windows 7+
-     - venv/bin/Activate.ps1
+    - On Linux and Mac
+        - source ./venv/bin/activate
+    - On Windows 7+
+        - venv/bin/Activate.ps1
 4. Install requirements
-   - pip3 install -r requirments.txt
+    - pip3 install -r requirments.txt
 
 ## Run the demo app
 #### Demo application try to understand entered sentence sentiment
