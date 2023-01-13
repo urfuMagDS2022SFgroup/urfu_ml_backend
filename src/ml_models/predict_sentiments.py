@@ -1,12 +1,11 @@
+import logging
 from typing import Any
 
 from transformers import pipeline, Pipeline
-import logging
-
 from urllib3.exceptions import ConnectTimeoutError
 
-from src.ml_models.predict_languages import PredictLanguage
 from src.custom_exceptions import UnsupportedLanguageException, TimeOutException
+from src.ml_models.predict_languages import PredictLanguage
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -23,7 +22,9 @@ class PredictSentiment:
         self.predicted_sentiment_label: str | None
         self.error: str | None
         self.pl: Any = PredictLanguage()
-        self.pipe: Pipeline = pipeline(task="sentiment-analysis", model="blanchefort/rubert-base-cased-sentiment")
+        self.pipe: Pipeline = pipeline(
+            task="sentiment-analysis", model="blanchefort/rubert-base-cased-sentiment"
+        )
 
     def predict_sentiment_classifier(self, input_text: str) -> None:
         if self._can_be_predicted(predicted_text=input_text):
@@ -33,8 +34,10 @@ class PredictSentiment:
                 try:
                     logging.debug(f"Try to implement prediction {try_} try")
                     predicted_sentiment = self.pipe(input_text)
-                    self.predicted_sentiment_score = round(predicted_sentiment[0]['score'], 3)
-                    self.predicted_sentiment_label = predicted_sentiment[0]['label']
+                    self.predicted_sentiment_score = round(
+                        predicted_sentiment[0]["score"], 3
+                    )
+                    self.predicted_sentiment_label = predicted_sentiment[0]["label"]
                     return
                 except ConnectTimeoutError:
                     logging.debug(f"Cannot download the model for {try_} try")

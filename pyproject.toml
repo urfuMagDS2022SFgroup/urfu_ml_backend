@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "URFU_2022_GROUP_20_PROJECT"
-version = "0.3.1"
+version = "0.6.1"
 description = "UrFU educational project"
 authors = [
     "Vladimir Katin <katin.v.v.@gmail.com>",
@@ -8,7 +8,7 @@ authors = [
     "Anton Bessolitsyn <Anton.Bessolitsyn@hotmail.com>",
     "Alexander Orlov <eaglophone@gmail.com>"
 ]
-license = "GPL v3"
+license = "GPL-3.0-or-later"
 readme = "README.md"
 repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 
@@ -16,6 +16,7 @@ repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 python = ">=3.10,<3.11"
 transformers = "^4.25.1"
 numpy = "^1.23.2"
+black = "22.12.0"
 
 
 [[tool.poetry.source]]
@@ -30,10 +31,10 @@ optional = true
 [tool.poetry.group.tensorflow]
 optional = true
 
-[tool.poetry.group.streamlit]
+[tool.poetry.group.backend]
 optional = true
 
-[tool.poetry.group.backend]
+[tool.poetry.group.tests]
 optional = true
 
 [tool.poetry.group.torch.dependencies]
@@ -45,9 +46,6 @@ torchvision = { version = "0.14.0", source = "torch" }
 tensorflow-cpu = "2.8.0"
 protobuf = ">=3.9.2,<3.20"
 
-[tool.poetry.group.streamlit.dependencies]
-streamlit = "1.13.0"
-
 [tool.poetry.group.backend.dependencies]
 fastapi = "0.88.0"
 pydantic = "^1.10.2"
@@ -55,6 +53,10 @@ uvicorn = "^0.20.0"
 importlib = "^1.0.4"
 librosa = "0.9.2"
 datasets = "2.8.0"
+
+[tool.poetry.group.tests.dependencies]
+pytest = "7.2.0"
+httpx = "0.23.2"
 
 
 [build-system]

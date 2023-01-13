@@ -1,7 +1,7 @@
 FROM python:3.10-buster
 ENV HOST="0.0.0.0"
 ENV PORT="8000"
-ENV POETRY_VERSION="1.3"
+ENV POETRY_VERSION="1.3.1"
 WORKDIR /back
 
 RUN pip install poetry==$POETRY_VERSION
