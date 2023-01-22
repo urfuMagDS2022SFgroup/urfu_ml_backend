@@ -4,7 +4,7 @@ from pydantic import BaseModel
 class Info(BaseModel):
     root: str = "/"
     get_info: str = "/info"
-    create_prediction_ru: str = "/predict/ru"
+    create_prediction_ru: str = "/predict"
     docs: str = "/docs"
 
 
@@ -13,7 +13,7 @@ class Root(BaseModel):
     practice: str = "Practice 4 - Fast API with tests"
     git_hub_back: str = "https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend"
     git_hub_front: str = "https://github.com/urfuMagDS2022SFgroup/streamlit_frontend"
-    authors: list = [
+    authors: list[str] = [
         "Vladimir Katin <katin.v.v.@gmail.com>",
         "Anton Bessolitsyn <Anton.Bessolitsyn@hotmail.com>",
         "Alexander Orlov <eaglophone@gmail.com>",
