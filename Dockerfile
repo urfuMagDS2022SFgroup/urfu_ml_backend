@@ -9,7 +9,7 @@ RUN pip install poetry==$POETRY_VERSION
 COPY pyproject.toml /back/pyproject.toml
 COPY poetry.toml /back/poetry.toml
 COPY poetry.lock /back/poetry.lock
-RUN poetry install --with torch,backend
+RUN poetry install --with torch
 
 COPY src /back/src
 

@@ -1,6 +1,9 @@
+[tool.black]
+line-length = 120
+
 [tool.poetry]
 name = "URFU_2022_GROUP_20_PROJECT"
-version = "0.6.1"
+version = "0.6.5"
 description = "UrFU educational project"
 authors = [
     "Vladimir Katin <katin.v.v.@gmail.com>",
@@ -16,7 +19,10 @@ repository = "https://github.com/urfuMagDS2022SFgroup/sf_data_science_python"
 python = ">=3.10,<3.11"
 transformers = "^4.25.1"
 numpy = "^1.23.2"
-black = "22.12.0"
+fastapi = "0.89.1"
+pydantic = "^1.10.2"
+uvicorn = "^0.20.0"
+importlib = "^1.0.4"
 
 
 [[tool.poetry.source]]
@@ -28,33 +34,26 @@ secondary = true
 [tool.poetry.group.torch]
 optional = true
 
-[tool.poetry.group.tensorflow]
-optional = true
-
-[tool.poetry.group.backend]
-optional = true
-
 [tool.poetry.group.tests]
 optional = true
 
+[tool.poetry.group.dev]
+optional = true
+
 [tool.poetry.group.torch.dependencies]
-torch = { version = "1.13.0", source = "torch" }
-torchaudio = { version = "0.13.0", source = "torch" }
-torchvision = { version = "0.14.0", source = "torch" }
+torch = { version = "1.13.1", source = "torch" }
 
-[tool.poetry.group.tensorflow.dependencies]
-tensorflow-cpu = "2.8.0"
-protobuf = ">=3.9.2,<3.20"
 
-[tool.poetry.group.backend.dependencies]
-fastapi = "0.88.0"
-pydantic = "^1.10.2"
-uvicorn = "^0.20.0"
-importlib = "^1.0.4"
+[tool.poetry.group.dev.dependencies]
+black = "22.12.0"
+pre-commit = "2.21.0"
+flake8 = "6.0.0"
+isort = "5.11.4"
 
 [tool.poetry.group.tests.dependencies]
 pytest = "7.2.0"
 httpx = "0.23.2"
+
 
 
 [build-system]
