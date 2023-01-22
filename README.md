@@ -1,4 +1,4 @@
-[![Linters and tests](https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend/actions/workflows/run_lints_and_tests_.yml/badge.svg?branch=main)](https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend/actions/workflows/run_lints_and_tests_.yml)
+[![Run Tests](https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend/actions/workflows/run_tests_.yml/badge.svg?branch=main)](https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend/actions/workflows/run_tests_.yml)
 [![Run Linters](https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend/actions/workflows/run_linters.yml/badge.svg)](https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend/actions/workflows/run_linters.yml)
 
 # Welcome to our small repository(20 group)
@@ -62,8 +62,8 @@ Answer should be like:
 {
   "root": "/",
   "get_info": "/info",
-  "create_prediction_ru": "/predict/ru",
-  "create_prediction_en": "/predict/en"
+  "create_prediction": "/predict",
+  "docs": "/docs"
 }
 ```
 
