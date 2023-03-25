@@ -40,7 +40,7 @@
     - pip3 install -r requirments.txt
 
 ## Run the demo app
-#### Demo application try to understand entered sentence sentiment
+#### Demo application trying to understand entered sentence sentiment
 ##### Practice 2: Web app text sentiment recognition using [Streamlit](https://streamlit.io/)
 
 - Streamlit lives [here](https://github.com/urfuMagDS2022SFgroup/streamlit_frontend) and should be run with this backend
