@@ -11,7 +11,7 @@ class TestRoot:
         expected = {
             "message": "Welcome to UrFU ML Engineering 2022, Group 20 project",
             "practice": "Practice 4 - Fast API with tests",
-            "git_hub_back": "https://github.com/urfuMagDS2022SFgroup/urfu_ml_backend",
+            "git_hub_back": "https://github.com/URFU-2022-machine-learning-engineering/sentiment_prediction_backend",
             "git_hub_front": "https://github.com/urfuMagDS2022SFgroup/streamlit_frontend",
             "authors": [
                 "Vladimir Katin <katin.v.v.@gmail.com>",

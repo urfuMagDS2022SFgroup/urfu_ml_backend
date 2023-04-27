@@ -45,7 +45,7 @@
 
 - Streamlit lives [here](https://github.com/urfuMagDS2022SFgroup/streamlit_frontend) and should be run with this backend
 ##### Practice 3
-1. Run `uvicorn backend:app` to use web API
+1. Run `uvicorn src.main:app` to use web API
 2. Use HTTP request to know sentence sentiment as result of your sentence processing
 ###### Using Docker
 1. [Install docker](https://docs.docker.com/get-docker/) on your system
@@ -71,3 +71,6 @@ Answer should be like:
 
 1. Install project using Poetry `poetry install --with backend,torch,tests`
 2. Run tests `poetry run pytest` (you must be in the project folder)
+
+
+Used models:

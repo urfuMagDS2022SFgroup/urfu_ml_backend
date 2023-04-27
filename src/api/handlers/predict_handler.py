@@ -1,30 +1,15 @@
-from fastapi import FastAPI, Response, status
+from fastapi import APIRouter, Response, status
 
-from src.api.models.basic import Info, Root
 from src.api.models.errors import PredictionError, TimeOutError
 from src.api.models.predicted import Predicted
 from src.api.models.to_predict import ToPredict
 from src.custom_exceptions import TimeOutException, UnsupportedLanguageException
 from src.ml_models.predict_sentiments import PredictSentiment
 
-__version__ = "0.6.5"
-
-app = FastAPI(version=__version__)
+router = APIRouter()
 
 
-@app.get("/", response_model=Root)
-async def root(root_: Root = Root()) -> Root:
-    """get info about authors and group"""
-    return root_
-
-
-@app.get("/info")
-async def get_info(info: Info = Info()) -> Info:
-    """get info about endpoints"""
-    return info
-
-
-@app.post("/predict", status_code=status.HTTP_200_OK)
+@router.post("/predict", status_code=status.HTTP_200_OK)
 async def create_prediction_ru(item: ToPredict, response: Response) -> PredictionError | TimeOutError | Predicted:
     """Try to predict Russian text sentiment"""
     ps = PredictSentiment()

@@ -2,7 +2,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from src.api.models.to_predict import ToPredict
-from src.backend import app
+from src.main import app
 
 
 @pytest.fixture(scope="session")
