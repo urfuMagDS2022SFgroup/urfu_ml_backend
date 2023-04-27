@@ -74,3 +74,5 @@ Answer should be like:
 
 
 Used models:
+- https://huggingface.co/papluca/xlm-roberta-base-language-detection
+- https://huggingface.co/blanchefort/rubert-base-cased-sentiment
